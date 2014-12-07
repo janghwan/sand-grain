@@ -1,0 +1,26 @@
+{
+  "name": "sand-grain",
+  "version": "0.0.1",
+  "description": "The base grain/module for Sand",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pocketly/sand-grain"
+  },
+  "keywords": [
+    "Sand",
+    "module"
+  ],
+  "author": "Kevin Smithson <ksmithson@pocketly.com>",
+  "homepage": "https://github.com/pocketly/sand-grain",
+  "bugs": {
+    "url": "https://github.com/pocketly/sand-grain/issues"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "only": "0.0.2",
+    "sand-extend": "0.0.1",
+    "sand-log": "0.0.1"
+  }
+}
