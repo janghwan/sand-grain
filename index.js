@@ -5,7 +5,7 @@
 var Extend = require('sand-extend').Extend;
 var EventEmitter = require('events').EventEmitter;
 var only = require('only');
-var Logger = require('sand-log');
+var Logger = require('sand').Logger;
 var _ = require('lodash');
 
 
