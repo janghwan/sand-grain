@@ -3,6 +3,7 @@
  */
 
 var Extend = require('sand-extend').Extend;
+var Class = require('sand-extend').Class;
 var EventEmitter = require('events').EventEmitter;
 var only = require('only');
 var Logger = require('sand').Logger;
@@ -14,17 +15,19 @@ var _ = require('lodash');
  *
  * @api public
  */
+exports = module.exports = Class.extend(EventEmitter, {
 
-function SandGrain() {
-  this.name = this.name || 'SandGrain';
-  this.configName = this.configName || this.name;
-  this.config = this.config || {};
-  this.defaultConfig = this.defaultConfig || {};
-  this.log = (new Logger(this.name)).log;
-  this.version = this.name == 'SandGrain' ? require('./package').version : 'unknown';
-}
+  isSandGrain: true, // artificial duck typing to satisfy Sand.js
 
-Extend(SandGrain, EventEmitter, {
+  construct: function() {
+    this.name = this.name || 'SandGrain';
+    this.configName = this.configName || this.name;
+    this.config = this.config || {};
+    this.defaultConfig = this.defaultConfig || {};
+    this.log = (new Logger(this.name)).log;
+    this.version = this.name == 'SandGrain' ? require('./package').version : 'unknown';
+  },
+
   inspect: toJSON,
 
   init: function(config) {
@@ -42,17 +45,3 @@ Extend(SandGrain, EventEmitter, {
 
   shutdown: _.noop
 });
-
-function toJSON() {
-  "use strict";
-  return only(this, [
-    'name',
-    'version'
-  ]);
-}
-
-/**
- * Expose `Application`
- */
-
-exports = module.exports = SandGrain;
