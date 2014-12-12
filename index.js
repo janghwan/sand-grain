@@ -21,7 +21,7 @@ exports = module.exports = Class.extend(EventEmitter, {
 
   construct: function() {
     this.name = this.name || 'SandGrain';
-    this.configName = this.configName || this.name;
+    this.configName = this.name;
     this.config = this.config || {};
     this.defaultConfig = this.defaultConfig || {};
     this.log = (new Logger(this.name)).log;
