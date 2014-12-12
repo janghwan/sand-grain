@@ -45,3 +45,11 @@ exports = module.exports = Class.extend(EventEmitter, {
 
   shutdown: _.noop
 });
+
+function toJSON() {
+  "use strict";
+  return only(this, [
+    'name',
+    'version'
+  ]);
+}
