@@ -1,6 +1,6 @@
 {
   "name": "sand-grain",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "The base grain/module for Sand",
   "main": "lib/SandGrain.js",
   "repository": {
@@ -20,7 +20,7 @@
   "dependencies": {
     "lodash": "^2.4.1",
     "only": "0.0.2",
-    "sand-extend": "0.0.3"
+    "sand-extend": "0.0.4"
   },
   "devDependencies": {
     "mocha": "^2.0.1",
