@@ -19,14 +19,15 @@ All Grains (Modules) used by Sand must first extend this base grain.
 	var MyModule = SandGrain.extend({
 		name: 'MyModule', // required
 		
-		init: function(config) { // required
-			this.super(config);
+		init: function(config, done) { // required
+			this.super(config, done);
 			// your initialization goes here
 		},
 		
-		shutdown: function() { // optional
+		shutdown: function(done) { // optional
 			// implementing this hook is optional
 			// your shutdown logic goes here
+			// Make sure to call done when you are done shutting down
 		}
 		
 		// add other public functions that you'd like to export here
