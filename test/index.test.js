@@ -35,6 +35,17 @@ describe('Grain', function() {
     module.config.test1.should.be.ok;
     module.config.test2.should.be.ok;
   });
+
+  it ('should work with just an all environment', function() {
+    var module = SandGrain();
+    module.init({
+      all: {
+        test1: true
+      }
+    });
+
+    module.config.test1.should.be.ok;
+  });
 });
 
 describe('TestModule', function() {
