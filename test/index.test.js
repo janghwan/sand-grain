@@ -12,17 +12,8 @@ var SandGrain = require('../lib/SandGrain');
 sand.use(TestModule, {test: {myParam: 'hello world!'}}).start();
 
 describe('Grain', function() {
-  it('should error with code 1 for bad config', function(done) {
-    child
-      .fork('test/testBadConfig.js')
-      .on('exit', function(code) {
-        code.should.be.eql(1);
-        done();
-      })
-  });
-
   it('should merge all and env configs', function() {
-    var module = SandGrain();
+    var module = new SandGrain();
     module.init({
       all: {
         test1: true
@@ -37,7 +28,7 @@ describe('Grain', function() {
   });
 
   it ('should work with just an all environment', function() {
-    var module = SandGrain();
+    var module = new SandGrain();
     module.init({
       all: {
         test1: true

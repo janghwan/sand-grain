@@ -1,35 +1,37 @@
+"use strict";
+
 /**
  * @author Adam Jaso <ajaso@pocketly.com>
+ * @author Kevin Smithson <ksmithson@pocketly.com>
+ *
  * @copyright 2014 Pocketly
  */ 
 
 var SandGrain = require('..');
 
-var TestModule = SandGrain.extend({
-  name: 'TestModule',
+class TestModule extends SandGrain {
+  constructor() {
+    super();
 
-  amIInitialized: false,
-  amIShutdown: false,
-  myConfig: null,
+    this.name = 'TestModule';
+    this.amIInitialized = false;
+    this.amIShutdown = false;
+    this.myConfig = null;
+  }
 
-  construct: function() {
-    this.super();
-  },
+  init(config) {
+    super.init(config);
 
-  init: function(config) {
-    this.super(config);
-
-    this.myConfig = config;
+    this.myConfig = this.config;
     this.amIInitialized = true;
 
     return this;
-  },
-
-  shutdown: function() {
-    this.super();
-    this.amIShutdown = true;
   }
 
-});
+  shutdown() {
+    super.shutdown();
+    this.amIShutdown = true;
+  }
+}
 
 exports = module.exports = TestModule;

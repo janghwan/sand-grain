@@ -1,4 +1,4 @@
 var SandGrain = require('../lib/SandGrain');
 
-var module = SandGrain();
+var module = new SandGrain();
 module.init({});
