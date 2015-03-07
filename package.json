@@ -23,7 +23,7 @@
   "dependencies": {
     "lodash": "^2.4.1",
     "only": "0.0.2",
-    "sand": "0.0.15"
+    "sand": "git+https://github.com/pocketly/sand.git#es6"
   },
   "devDependencies": {
     "mocha": "^2.0.1",
