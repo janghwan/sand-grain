@@ -1,6 +1,6 @@
 {
   "name": "sand-grain",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "The base grain/module for Sand",
   "main": "lib/SandGrain.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "dependencies": {
     "lodash": "^2.4.1",
     "only": "0.0.2",
-    "sand": "git+https://github.com/pocketly/sand.git#es6"
+    "sand": "1.0.0"
   },
   "devDependencies": {
     "mocha": "^2.0.1",
