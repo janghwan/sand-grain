@@ -22,8 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^2.4.1",
-    "only": "0.0.2",
-    "sand": "1.0.0"
+    "only": "0.0.2"
   },
   "devDependencies": {
     "mocha": "^2.0.1",
