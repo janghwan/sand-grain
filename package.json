@@ -1,6 +1,6 @@
 {
   "name": "sand-grain",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "The base grain/module for Sand",
   "main": "lib/SandGrain.js",
   "scripts": {
